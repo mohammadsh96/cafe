@@ -1,27 +1,40 @@
 'use strict';
 require('dotenv').config();
-const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 const notFoundHandler = require("./handlers/404");
 const errorHandler = require("./handlers/500");
 
-const signinRouters=require("./auth/routes/signin");
-const signupRouters=require("./auth/routes/signup");
-const secretRouters=require("./auth/routes/secret");
-const getUsersRouters=require("./auth/routes/allusers");
-const aclRouter = require('./auth/routes/acl.route');
+const signInRouter=require("./routes/signin");
+const signUpRouter=require("./routes/signup");
+const secretRouter=require("./routes/secret");
+const getUsersRouters=require("./routes/allUsers");
+const aclRouter =require("./routes/acl.route");
+const router =require("./routes/router");
+app.get("/" , handleHome)
+
+
 app.use(express.json());
-app.use(signinRouters);
-app.use(signupRouters);
-app.use(secretRouters);
+app.use(signInRouter);
+app.use(signUpRouter);
+app.use(secretRouter);
 app.use(getUsersRouters);
 app.use(aclRouter);
+app.use(router);
+
+function handleHome(req ,res){
+res.send("welcome to heroku auth-api server")
+
+
+}
+
+
 app.use("*", notFoundHandler);
 app.use(errorHandler); 
 
-function start(PORT) {
+function start() {
     app.listen(PORT, () => {
         console.log(`Listen and Running on port ${PORT}`);
     });

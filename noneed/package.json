@@ -1,24 +1,24 @@
 {
-  "name": "auth-api2",
+  "name": "auth-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest --coverage --verbose",
-    "dev": "NODE_ENV=development nodemon index.js",
+    "dev": "NODE_ENV=development node index.js",
     "start": "NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohammadsh96/auth-api2.git"
+    "url": "git+https://github.com/mohammadsh96/auth-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mohammadsh96/auth-api2/issues"
+    "url": "https://github.com/mohammadsh96/auth-api/issues"
   },
-  "homepage": "https://github.com/mohammadsh96/auth-api2#readme",
+  "homepage": "https://github.com/mohammadsh96/auth-api#readme",
   "dependencies": {
     "base-64": "^1.0.0",
     "bcrypt": "^5.0.1",
@@ -27,7 +27,7 @@
     "jest": "^28.1.1",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.3",
-    "sequelize": "^6.21.0",
+    "sequelize": "^6.20.1",
     "sqlite3": "^5.0.8",
     "supertest": "^6.2.3"
   }
