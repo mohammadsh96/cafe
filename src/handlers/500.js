@@ -1,10 +1,9 @@
-'use strict';
-
-module.exports = (err, req, res, next) => {
-  let error = { error: err.message || err };
-  res.statusCode = err.status || 500;
-  res.statusMessage = err.statusMessage || 'Server Error';
-  res.setHeader('Content-Type', 'application/json');
-  res.write(JSON.stringify(error));
-  res.end();
+"use strict";
+module.exports = (error, req, res, next) => {
+    console.log(error)
+    res.status(500).send({
+        code: 500,
+        route: req.path,
+        message: ` internal Server Error: ${error.message || error}`,
+    });
 };

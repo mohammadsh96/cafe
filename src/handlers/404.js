@@ -1,10 +1,9 @@
-'use strict';
-
-module.exports = (req,res,next) => {
-  let error = { error: 'Resource Not Found' };
-  res.statusCode = 404;
-  res.statusMessage = 'Not Found';
-  res.setHeader('Content-Type', 'application/json');
-  res.write(JSON.stringify(error));
-  res.end();
+"use strict";
+module.exports = (req, res, next) => {
+    //we can use   .json
+    res.status(404).send({
+        code: 404,
+        route: req.path,
+        message: "page not found",
+    });
 };

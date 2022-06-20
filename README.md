@@ -1,13 +1,20 @@
 # auth-api
 
-[heroku app link](https://auth-api-msh.herokuapp.com/)
+[heroku app](https://auth-api-mnsh.herokuapp.com/)
 
-[github actions](https://github.com/mohammadsh96/auth-api/actions)
+[pull request](https://github.com/mohammadsh96/auth-api2/pull/1)
 
-[pull request](https://github.com/mohammadsh96/auth-api/pull/1)
+[github actions](https://github.com/mohammadsh96/auth-api2/actions)
 
-## UML diagram
-![UMl](./Screenshot%20(192).png)
 
-## WRRC 
-![WRRC](./Screenshot%20(193).png)
+## UML
+![UMl](UML.png)
+
+
+
+## WRRC
+![WRRC](WRRC.png)
+
+## tests
+![test](test.png)
+![testt](test1.png)
